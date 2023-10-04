@@ -1,0 +1,337 @@
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+[[ "$(uname -s)" =~ ^CYGWIN*|MINGW*|MSYS* ]]
+[[ "$HISTCONTROL" =~ .. ]]
+__vsc_history_verify=1
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+echo hello terminal
+pwd
+ls --color=auto
+__vsc_prompt_cmd_original
+cd freeCodeCamp/
+__vsc_prompt_cmd_original
+pwd
+__vsc_prompt_cmd_original
+ls --color=auto
+cd test
+ls --color=auto
+pwd
+ls --color=auto
+cd ..
+ls --color=auto
+mote test
+more package.json
+clear
+ls --color=auto
+cd node_modules/
+__vsc_prompt_cmd_original
+ls --color=auto
+ls --color=auto -l
+cd has
+ls --color=auto
+more README.md
+ls --color=auto
+__vsc_prompt_cmd_original
+more license
+more L
+more LICENSE-MIT
+clear
+ls --color=auto
+cd src
+pwd
+cd /
+cd
+cd project/freeCodeCamp/node_modules/has
+cd src/
+ls --color=auto
+more index,js
+more index.js
+cd ..
+cd ..
+cd ../..
+ls --color=auto
+cear
+clear
+mkdir website
+ls --color=auto
+__vsc_prompt_cmd_original
+cd website/
+ls --color=auto
+echo hello website
+touch index.html
+touch styles.css
+ls --color=auto
+touch index.js
+touch .gitignore
+ls --color=auto
+ls --color=auto -h
+ls --color=auto --help
+ls --color=auto -a
+cd .
+touch background.png
+touch background.jpg
+__vsc_prompt_cmd_original
+mv background.png header.png
+touch footer,jpeg
+mv footer,jpeg footer.jpeg
+ls --color=auto
+touch roboto.font
+touch lato.font
+touch menlo.font
+ls --color=auto
+touch CodeAlly.svg
+touch CodeRoad.svg
+touch freeCodeCamp.svg
+ls --color=auto
+mkdir images
+ls --color=auto
+cp background.jpg images
+cd images
+ls --color=auto
+cd ..
+ls --color=auto
+rm background.jpg
+ls --color=auto
+cp header.png i
+cp header.png images
+ls --color=auto
+rm i
+cp footer.jpeg images
+cd images/
+lsls
+ls --color=auto
+cd ..
+rm footer.jpeg
+rm header.png
+ls --color=auto
+rm header.png
+rm footer.png
+ls --color=auto
+rm footer.jpeg
+ls --color=auto
+mv roboto.font roboto.woff
+ls --color=auto
+mv lato.font lato.ttf
+mv menlo.font menlo.otf
+ls --color=auto
+mkdir fonts
+ls --color=auto
+mv roboto.woff lato.ttf menlo.otf fonts
+ls --color=auto
+cd fonts
+ls --color=auto
+cd ..
+mv roboto.woff
+mv roboto.woff lato.ttf menlo.otf website
+mv roboto.woff lato.ttf menlo.otf ~/project/website/
+cd font
+mv roboto.woff lato.ttf menlo.otf ~/project/website/
+cd fonts
+mv roboto.woff lato.ttf menlo.otf ~/project/website/
+cd ..
+mv roboto.woff fonts
+find
+mv lato.ttf fonts
+mv menlo.otf fonts/
+find
+mkdir client
+mkdir client/src
+mv index.html client/src/
+find
+mv index.js client/src/
+mv styles.css client/src/
+find
+find client
+find --help
+find -name index.html
+find -name style.css
+find -name styles.css
+find -name src
+find website
+ls --color=auto
+find
+cd client/
+mkdir assets
+__vsc_prompt_cmd_original
+cd assets/
+mkdir images
+cd images
+touch background.jpg
+cd ../../..
+cd images
+ls --color=auto
+mv header.png .
+mv header.png ..
+ls --color=auto
+cd ..
+ls --color=auto
+find -nam images
+find -name images
+mv header.png ./client/assets/images
+find -nam header.png
+find -name header.png
+find footer.jpeg
+find footer.jpg
+find -name footer.jpg
+find -name footer.jpeg
+mv ./images/footer.jpeg ./client/assets/images
+fidn
+find
+rmdir images
+rm images/background.jpg
+rmdir images/
+ls --color=auto
+mkdir client/assets/icons
+mv CodeAlly.svg client/assets/icons
+find
+mv CodeRoad.svg client/assets/icons
+mv freeCodeCamp.svg client/assets/icons
+find
+mkdir client/assets/fonts
+touch client/assets/fonts/roboto-bold.woff
+touch client/assets/fonts/roboto-light.woff
+find
+find client
+find client/assets/fonts/
+touch client/assets/fonts/lato-bold.ttf
+touch client/assets/fonts/lato-light.ttf
+find
+rm -h
+rm --help
+rm -r fonts
+ls --color=auto
+touch package.json
+touch server.js
+touch README.md
+ls --color=auto
+echo Yay!
+echo "I finished the boilerplate"
+echo "I finished the boilerplate!"
+echo I finished the boilerplate!
+echo one more thing...
+echo I made this boilerplate >> README.md
+more README.md
+echo from the command line >> README.md
+more README.md
+echo for the freeCodeCamp bash lessons >> README.md
+more README.md
+cd project
+cd ..
+ls --color=auto
+mv website website-boilerplate
+ls --color=auto
+compy --help
+copy --help
+cp --help
+cp -r website-boilerplate/ toms-website
+ls --color=auto
+find toms-website/
+find website-boilerplate/
+clear
+echo goodbye terminal
+exit
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+[[ "$(uname -s)" =~ ^CYGWIN*|MINGW*|MSYS* ]]
+[[ "$HISTCONTROL" =~ .. ]]
+__vsc_history_verify=1
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+git branch
+gh repo
+apt install gh
+sudo apt install gh
+type -p curl > /dev/null
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg
+sudo apt update
+sudo apt install gh
+gh repo
+git --help
+git add -A
+git commit -m "sera se da certo"
+git checkout
+git commit -A
+git commit -m "vaiii"
+git add -A
+git add -A
+gh pr create
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+echo -n f1273357-5a81-4562-acf0-73fb4c79ebc4
+cat /proc/self/environ
+echo -n f1273357-5a81-4562-acf0-73fb4c79ebc4
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+'/vscode/vscode-server/bin/linux-x64/fdb98833154679dbaa7af67a5a29fe19e55c2b73/node' -p '"72f0cb6c182d" + JSON.stringify(process.env) + "72f0cb6c182d"'
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+[[ "$(uname -s)" =~ ^CYGWIN*|MINGW*|MSYS* ]]
+[[ "$HISTCONTROL" =~ .. ]]
+__vsc_history_verify=1
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+gh pr create
+gh auth login
+gh pr create
+gh repo
+gh repo set-default
+gh pr create
+gh commit -A
+git commit -A
+git commit -a
+git commit -m "oi"
+gh pr create
+ls --color=auto
+cd /
+ls --color=auto
+cd ~/project/
+pwd
